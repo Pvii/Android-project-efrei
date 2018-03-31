@@ -1,0 +1,11 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/gorafi"
+        android:title="@string/gorafi_name" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/onion"
+        android:title="@string/onion_name" />
+
+</PreferenceScreen>
