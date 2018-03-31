@@ -96,7 +96,14 @@ public class FavoryActivity extends Activity {
                 articleDefList.remove(articleDefList.get(position));
                 ArrayList<String> list;
                 list = getStringArrayPref(getApplicationContext(), "urls");
-                list.remove(articleDefList.get(position).getLink());
+                //correction du plantage
+                try {
+                    list.remove(articleDefList.get(position).getLink());
+                }catch (IndexOutOfBoundsException e){
+                    list = new ArrayList<String>();
+                }
+
+
                 setStringArrayPref(getApplicationContext(),"urls" , list);
                 Toast.makeText(getApplicationContext(), "Favorite deleted", Toast.LENGTH_SHORT).show();
                 mAdapter.notifyDataSetChanged();

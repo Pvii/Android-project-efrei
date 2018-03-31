@@ -124,8 +124,8 @@ public class MainActivity extends AppCompatActivity {
     public void prepareData(ArrayList<String> res, ArrayList<String>res2) {
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        boolean gorafi = sharedPreferences.getBoolean("gorafi", false);
-        boolean onion = sharedPreferences.getBoolean("onion", false);
+        boolean gorafi = sharedPreferences.getBoolean("gorafi", true);
+        boolean onion = sharedPreferences.getBoolean("onion", true);
         System.out.println(gorafi);
         System.out.println(onion);
 
